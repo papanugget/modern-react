@@ -6,7 +6,8 @@ import VideoList from './VideoList';
 class App extends React.Component {
     // add state to contain returned videos data
     state = {
-        videos: []
+        videos: [],
+        selectedVideo: null
     };
 
     // refactor to async func
@@ -21,12 +22,17 @@ class App extends React.Component {
         this.setState({ videos: res.data.items})
         // console.log(this.state);
     };
+    onVideoSelect = (video) => {
+        // console.log('From the App!' , video);
+        this.setState({selectedVideo: video})
+        console.log(this.state);
+    }
     render() {
         return (
             <div className="ui container">
                 <SearchBar onFormSubmit={this.onTermSubmit}/>
                 I found {this.state.videos.length} videos.
-                <VideoList videos={this.state.videos}/>
+                <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos}/>
             </div>
         )
     }
