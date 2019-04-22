@@ -7,7 +7,7 @@ const VideoList = (props) => {
     const onVideoSelect = props.onVideoSelect;
 
     const renderedList = videos.map( (video) => {
-        return <VideoItem video={video} onVideoSelect={onVideoSelect}/>
+        return <VideoItem video={video} onVideoSelect={onVideoSelect} key={video.id.videoId}/>
     })
     return (
         <div className="ui relaxed divided list">
