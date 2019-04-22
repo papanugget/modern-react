@@ -10,7 +10,9 @@ class App extends React.Component {
         videos: [],
         selectedVideo: null
     };
-
+    componentDidMount() {
+        this.onTermSubmit('star wars');
+    }
     // refactor to async func
     onTermSubmit = async (term) => {
         // console.log(term);
@@ -20,7 +22,10 @@ class App extends React.Component {
             }
         });
         // console.log(res);
-        this.setState({ videos: res.data.items})
+        this.setState({ 
+            videos: res.data.items,
+            selectedVideo: res.data.items[0]
+        });
         // console.log(this.state);
     };
     onVideoSelect = (video) => {
