@@ -1,14 +1,10 @@
 import React from 'react';
+import { selectSong } from '../actions '
 
-class App extends React.Component {
-    state = {  
-
-    };
-    render() { 
-        return (  
-            <div>This is the App view</div>
-        );
-    }
+const App = () => {
+    return (
+        <div>The App View Is Here</div>
+    )
 }
  
 export default App;
