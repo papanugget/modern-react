@@ -7,4 +7,22 @@ export const selectSong = (song) => {
     };
 };
 
+export const deleteSong = (song) => {
+    return {
+        type: 'SONG_DELETED',
+        payload: song
+    }
+}
+
+export const addSong = (title, artist, genre) => {
+    return {
+        type: 'ADD_SONG',
+        payload: {
+            title: title,
+            artist: artist,
+            genre: genre
+        }
+    }
+}
+
 // named export
