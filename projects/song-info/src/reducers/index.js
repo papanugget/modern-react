@@ -34,13 +34,13 @@ const selectedSongReducer = (selectedSong = null, action) => {
     return selectedSong;
 }
 
-const songDatabaseReducer = ( songList = [], action) => {
+const songDatabaseReducer = (songsReducer = [], action) => {
     if(action.type === 'ADD_SONG') {
-        return [...songList, action.payload];
+        return [...songsReducer, action.payload];
     } else if(action.type === 'DELETE_SONG') {
-        return songList.filter( song => song !== action.payload.song);
+        return songsReducer.filter( song => song !== action.payload.song);
     }
-    return songList;
+    return songsReducer;
 }
 
 export default combineReducers({
