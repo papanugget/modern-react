@@ -6,7 +6,7 @@ const SongDetail = ({song}) => {
     console.log(song);
     return (
         !song ? <h3>Please select a song</h3> : <div>
-            <h3>Details for: </h3>
+            <h3>Details for""{song.title }": </h3>
             <p>
                 Title: {song.title}
                 <br/>
