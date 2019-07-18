@@ -1,13 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchUser } from '../actions';
 
 class UserHeader extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
+    componentDidMount() {
+        this.props.fetchUser(this.props.userID);
     }
     render() {
-        return (  );
+        return (
+            <div>USER HEADER</div>
+        );
     }
 }
 
-export default UserHeader;
+export default connect (null, {fetchUser})(UserHeader);
