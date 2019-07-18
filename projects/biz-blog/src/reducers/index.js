@@ -5,5 +5,5 @@ import userReducer from './userReducer';
 export default combineReducers({
    // placeHolderFunc: () => 'replace with real data'
    posts: postsReducer,
-   user: userReducer
+   users: userReducer
 });
