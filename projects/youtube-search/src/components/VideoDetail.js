@@ -8,7 +8,7 @@ const VideoDetail = (props) => {
     }
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
     const videoDate = new Date(video.snippet.publishedAt).toLocaleDateString() + ' at ' + new Date(video.snippet.publishedAt).toLocaleTimeString();
-    console.log(videoDate);
+    // console.log(videoDate);
     return (
         <div >
             <div className="ui embed">

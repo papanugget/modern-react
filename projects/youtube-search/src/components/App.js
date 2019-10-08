@@ -22,7 +22,7 @@ class App extends React.Component {
             }
         });
         // console.log(res);
-        this.setState({ 
+        this.setState({
             videos: res.data.items,
             selectedVideo: res.data.items[0]
         });
@@ -46,10 +46,10 @@ class App extends React.Component {
                             <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos}/>
                         </div>
                     </div>
-                    
+
                 </div>
                 {/* I found {this.state.videos.length} videos. */}
-                
+
             </div>
         )
     }
